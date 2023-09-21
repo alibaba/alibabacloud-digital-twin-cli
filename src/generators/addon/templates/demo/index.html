@@ -1,0 +1,39 @@
+<html>
+  <title>命令行工具</title>
+  <body>
+    <div style="width:990px;margin:auto;padding-bottom:50px;">
+      <h1>插件调试方案</h1>
+      <div>
+        <h2>第一步：打开调试页面</h2>
+        <p>选择编辑器菜单中的“开发者选项”->“开发者选项设置”</p>
+        <img width="100%" src="images/Snip20230404_1.png" />
+      </div>
+      <div>
+        <h2>第二步：设置调试配制</h2>
+        <p>填写调试设置配制必须配制参数</p>
+        <ul>
+          <li>包名：代码开发包中的package.json中的name字段的值</li>
+          <li>域名：调试测试的地址，包开启调试后，默认地址为127.0.0.1:8020/index.js，一般无须修改</li>
+          <li>启用：是否启用调试包，启用后，将会从加载该调试包</li>
+        </ul>
+        <p>备注：设置后需要保存后刷新页面才能生效</p>
+        <img width="100%" src="images/Snip20230404_4.png" />
+      </div>
+      <div>
+        <h2>第三步：开启并保证后刷新进行调试</h2>
+        <p>启用并保存后，再刷新页面，会加载该调试文件，在network中查看是否加载，加载后调试成功，再验证功是生效</p>
+        <img width="100%" src="images/Snip20230404_10.png" />
+      </div>
+      <!-- <img src="images/doc.jpg" style="width:100%" /> -->
+      <p style=font-size:30px;color:red;">备注</p>
+      <div style=font-size:20px;color:blue;">
+        <p>如是页面是https,因跨域问题，则采用`tnpm run starts启动https服务,而非tnpm run start`启动http;</p>
+        <p>首次可能会出现打开的失败问题, 解决方案如下：</p>
+        <p>第一步：打开控制台</p>
+        <img src="images/https-error.png" style="width:100%" />
+        <p>第二步：继续查看页面</p>
+        <img src="images/https-error1.jpg" style="width:100%" />
+      </div>
+    </div>
+  </body>
+</html>
